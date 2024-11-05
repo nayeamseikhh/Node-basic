@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node</title>
+</head>
+<body>
+    <h1><b>My first node Mongo DB website</b></h1>
+    <h1 id="userName"></h1>
+    <script>
+        fetch('http://localhost:4000/users/3')
+        .then(res => res.json())
+        .then(data=>{
+            document.getElementById('userName').innerText = data.name;
+        })
+        app.post('/addUser', (req, res)=>{
+            console.log(req.body);
+        })
+    </script>
+</body>
+</html>
